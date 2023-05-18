@@ -8,14 +8,20 @@
 </head>
 <body>
     <form action="insert.php" method="POST">
+        <H1>Registration</H1>
         <div>
             <label for="email">Email</label>
             <input type="text" name="email">
         </div>
         <div>
             <label for="password">Email</label>
-            <input type="password" name="email">
+            <input type="password" name="password">
         </div>
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name">
+        </div>
+        <button>Submit</button>
     </form>
 </body>
 </html>
