@@ -13,4 +13,6 @@ $stmt->bindValue ('email',$email);
 $stmt->bindValue ('password',$password);
 $stmt->bindValue ('name',$name);
 $stmt->execute();
+
+header ('location:../login.php')
 ?>

@@ -7,37 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="insert.php" method="POST">
+    <form action="login.php" method="POST">
         <H1>Registration</H1>
         <div>
             <label for="email">Email</label>
-            <input type="text" name="email">
+            <input type="text" name="email" for="email">
         </div>
         <div>
             <label for="password">Password</label>
-            <input type="password" name="password">
+            <input type="password" name="password" for="password">
         </div>
         <div>
             <label for="name">Name</label>
-            <input type="text" name="name">
+            <input type="text" name="name" for="name">
         </div>
         <button>Submit</button>
     </form>
-    <?php
-$pdo = new PDO('mysql:host=localhost;dbname=bsit201_portugal_chatroom','root','');
-
-$email = $_POST['email'];
-$password = $_POST['password'];
-$name = $_POST['name'];
-
-$query = 'INSERT INTO accounts(email,password,name) VALUES(:email,:password,:name)';
-
-$stmt = $pdo->prepare($query);
-
-$stmt->bindValue ('email');
-$stmt->bindValue ('password');
-$stmt->bindValue ('name');
-$stmt->execute();
-?>
 </body>
 </html>
